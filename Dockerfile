@@ -4,7 +4,7 @@ MAINTAINER  thomasdolar@gmail.com
 
 COPY        nginx.conf /etc/nginx/conf.d/default.conf
 
-RUN         mkdir /var/commercefacile/cert
+RUN         mkdir -p /var/commercefacile/cert
 
 COPY        ./.cert/* /var/commercefacile/cert
 
