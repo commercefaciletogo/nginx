@@ -4,11 +4,9 @@ MAINTAINER  thomasdolar@gmail.com
 
 COPY        nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY        letsencrypt.conf /etc/nginx/letsencrypt.conf
+RUN         mkdir /var/commercefacile/cert
 
-COPY        ssl.conf /etc/nginx/ssl.conf
-
-COPY        php.conf /etc/nginx/php.conf
+COPY        ./.cert/* /var/commercefacile/cert
 
 # ENTRYPOINT ["nginx"]
 # CMD ["-g", "daemon off;"]
